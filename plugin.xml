@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="in.yaswanth.serverSocketsforCordova" version="0.1.0">
-    <name>SocketsForCordova</name>
+    <name>serverSocketsForCordova</name>
     <description>
 		This Cordova plugin provides JavaScript API, that allows you to communicate with clients through TCP protocol.
 		Currently we support these platforms:Android.
