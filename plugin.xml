@@ -9,26 +9,26 @@
     <license>Apache 2.0</license>
     <keywords>socket,sockets,network,tcp,cordova,sever,Android,serverSocket,serverSockets</keywords>
 
-    <js-module src="socket.js" name="Socket">
-        <clobbers target="window.Socket" />
+    <js-module src="socket.js" name="serverSocket">
+        <clobbers target="window.serverSocket" />
     </js-module>
     
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SocketsForCordova"> 
-                <param name="android-package" value="cz.blocshop.socketsforcordova.SocketPlugin"/>
+            <feature name="serverSocketsForCordova"> 
+                <param name="android-package" value="in.yaswanth.serverSocketsForCordova.SocketPlugin"/>
             </feature>
         </config-file>
 		<config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
         </config-file>  
-		<source-file src="src/android/src/cz/blocshop/socketsforcordova/Logging.java" target-dir="src/cz/blocshop/socketsforcordova" />
-        <source-file src="src/android/src/cz/blocshop/socketsforcordova/Consumer.java" target-dir="src/cz/blocshop/socketsforcordova" />
-		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketAdapter.java" target-dir="src/cz/blocshop/socketsforcordova" />
-		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketAdapterImpl.java" target-dir="src/cz/blocshop/socketsforcordova" />
-		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketAdapterOptions.java" target-dir="src/cz/blocshop/socketsforcordova" />
-		<source-file src="src/android/src/cz/blocshop/socketsforcordova/SocketPlugin.java" target-dir="src/cz/blocshop/socketsforcordova" />
+		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/Logging.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+        <source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/Consumer.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketAdapter.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketAdapterImpl.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketAdapterOptions.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketPlugin.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
 		
     </platform>
     
