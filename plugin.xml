@@ -23,11 +23,11 @@
 		<config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET" />
         </config-file>  
-		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/Logging.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
-        <source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/Consumer.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+		<!--source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/Logging.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+        	<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/Consumer.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
 		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketAdapter.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
 		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketAdapterImpl.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
-		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketAdapterOptions.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
+		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketAdapterOptions.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" /-->
 		<source-file src="src/android/src/in/yaswanth/serverSocketsForCordova/SocketPlugin.java" target-dir="src/in/yaswanth/serverSocketsForCordova/" />
 		
     </platform>
