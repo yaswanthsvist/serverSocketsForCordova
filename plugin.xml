@@ -9,7 +9,7 @@
     <license>Apache 2.0</license>
     <keywords>socket,sockets,network,tcp,cordova,sever,Android,serverSocket,serverSockets</keywords>
 
-    <js-module src="socket.js" name="serverSocket">
+    <js-module src="serverSocket.js" name="serverSocket">
         <clobbers target="window.serverSocket" />
     </js-module>
     
