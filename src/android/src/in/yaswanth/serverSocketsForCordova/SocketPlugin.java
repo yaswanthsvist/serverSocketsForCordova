@@ -35,13 +35,14 @@ public class SocketPlugin extends CordovaPlugin {
 	public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
 	    if (action.equals("open")) {
 	    	    Socket socket = null;
+	    	    BufferedReader input;
 	    	     try {
 	                serverSocket = new ServerSocket(SERVERPORT);
 	                callbackContext.success();
 	                try{
 	                socket = serverSocket.accept();
 	        	   try{
-	        	       	private BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+	        	        input= new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	                   }catch(IOException e){
 	                	e.printStackTrace();
 	                	callbackContext.error("reading socket error");
