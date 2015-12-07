@@ -27,10 +27,35 @@ import org.json.JSONObject;
 
 
 public class SocketPlugin extends CordovaPlugin {
+	
+	private ServerSocket serverSocket;
+	public static final int SERVERPORT = 6000;
+	
 	@Override
 	public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
 	    if (action.equals("open")) {
-	            callbackContext.success();
+	    	    Socket socket = null;
+	    	     try {
+	                serverSocket = new ServerSocket(SERVERPORT);
+	                callbackContext.success();
+	                try{
+	                socket = serverSocket.accept();
+	        	   try{
+	        	       	this.input = new BufferedReader(new InputStreamReader(this.clientSocket.getInputStream()));
+	                   }catch(IOException e){
+	                	e.printStackTrace();
+	                	callbackContext.error("reading socket error");
+	                   }
+		 	
+	                }catch(IOException e){
+	                	e.printStackTrace();
+	                	callbackContext.error("server accept socket error");
+	                }
+	            } catch (IOException e) {
+        	        e.printStackTrace();
+        	        callbackContext.error("opening port error");
+        	    }
+		    
 	    }
 	    return true;
 	}
