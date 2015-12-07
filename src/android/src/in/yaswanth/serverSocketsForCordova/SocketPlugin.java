@@ -39,10 +39,10 @@ public class SocketPlugin extends CordovaPlugin {
 	    	     try {
 	                serverSocket = new ServerSocket(SERVERPORT);
 	                callbackContext.success();
-	                try{
-	                socket = serverSocket.accept();
+	              /*  try{
+	                //socket = serverSocket.accept();
 	        	   try{
-	        	        input= new BufferedReader(new InputStreamReader(socket.getInputStream()));
+	        	 //       input= new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	                   }catch(IOException e){
 	                	e.printStackTrace();
 	                	callbackContext.error("reading socket error");
@@ -52,6 +52,7 @@ public class SocketPlugin extends CordovaPlugin {
 	                	e.printStackTrace();
 	                	callbackContext.error("server accept socket error");
 	                }
+	                */
 	            } catch (IOException e) {
         	        e.printStackTrace();
         	        callbackContext.error("opening port error");
