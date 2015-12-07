@@ -41,7 +41,7 @@ public class SocketPlugin extends CordovaPlugin {
 	                try{
 	                socket = serverSocket.accept();
 	        	   try{
-	        	       	this.input = new BufferedReader(new InputStreamReader(this.clientSocket.getInputStream()));
+	        	       	this.input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	                   }catch(IOException e){
 	                	e.printStackTrace();
 	                	callbackContext.error("reading socket error");
